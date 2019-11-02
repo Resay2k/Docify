@@ -1,0 +1,23 @@
+<input type='file' accept='image/*'  onchange='onImageUpload(event)' >
+<br/>
+<img id = 'image' src='#' alt='IMAGE' width="595" height="842">
+<script>
+  var onImageUpload = function(event) {
+    // get input blob
+    var input = event.target
+
+    // create asynchronous file reader
+    var reader = new FileReader();
+
+    // display image after completion of read operation
+    reader.onload = function () {
+      dataURL = reader.result
+      var img = document.getElementById('image')
+      img.src = dataURL
+
+    }
+
+    reader.readAsDataURL(input.files[0]);
+  }
+
+</script>
