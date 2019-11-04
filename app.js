@@ -1,5 +1,7 @@
 const express = require('express')
 const multer  = require('multer')
+const childProcess = require("child_process")
+
 
 const app = express()
 const upload = multer({ dest: 'uploads/' })
@@ -15,8 +17,8 @@ app.post('/upload', upload.single('photo'), (req, res, next) => {
     if(req.file) {
         console.log(req.file)
 
-        var spawn = require("child_process").spawn;
-        var process = spawn('python',["./hello.py"]);
+        // start python process and pass saved images filename
+        var process = childProcess.spawn('python',["./vision.py", req.file.filename]);
 
 
         // Takes stdout data from script which executed
