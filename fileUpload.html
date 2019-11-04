@@ -1,6 +1,10 @@
-<input type='file' accept='image/*'  onchange='onImageUpload(event)' >
+<form action="/upload" method="post" enctype="multipart/form-data">
+  <!-- <input type='file' accept='image/*'  onchange='onImageUpload(event)' name="photo"> -->
+  <input type='file' accept='image/*' name="photo">
+  <input type="submit" value="upload">
+</form>
 <br/>
-<img id = 'image' src='#' alt='IMAGE' width="595" height="842">
+<img id = 'image' src='#' alt='IMAGE' style="height:80%;" >
 <script>
   var onImageUpload = function(event) {
     // get input blob
