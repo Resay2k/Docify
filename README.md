@@ -22,13 +22,13 @@ First we will use openCV’s EAST detector to detect text. To do this we follow 
 
 ### 4.1 Image Representation
 
-When an image is read into variable using the OpenCV library, it is stored in a numpy array. The array is a 2D matrix with each element representing an image pixel. Aside from height and width, these arrays also have 3rd dimension that represents the number of ‘channels’ it has:
+When an image is read into variable using the OpenCV library, it is stored in a numpy array. The array is a 2D matrix with each element representing an image pixel. Aside from height and width, these arrays also have 3rd dimension that represents the number of channels it has:
 
 
 
-1. Gray scale images are held in single channel arrays with pixel values ranging from 0-255. The channel holds the ‘grayness of a pixel’. 0 representing white and 255 representing.
-2.  RGB images are held in 3 channel arrays with pixel values ranging from 255*255*255. The channels represent how red, green or blue a pixel is.
-3. RGBA images are held in 4 channel arrays ranging from 255*255*255*255 with the last channel representing how transparent an image is. 0 representing complete transparency and 255 complete opaqueness.
+1. Gray scale images are held in single channel arrays with pixel values ranging from 0-255. The channel holds the grayness of a pixel. 0 representing the color white and 255 representing black.
+2.  RGB images are held in 3 channel arrays with pixel values ranging from 255*255*255. The channels represent how red, green and blue a pixel is, respectively.
+3. RGBA images are held in 4 channel arrays ranging from 255*255*255*255 with the last channel representing how transparent an image is. 0 represents complete transparency and 255 complete opaqueness.
 
 
 ### 4.2 Deep Learning
