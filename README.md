@@ -5,7 +5,7 @@ Build a web application that converts handwritten notes to Google Documents.
 
 ## 2. How
 
-Tesseract is an optical character recognition (OCR) engine that works very well under closed conditions. To recognize text, there must be a very clean segmentation of the foreground text from the background<sup>[1](#1)</sup>. These conditions are unlikely to be met for the photos uploaded to this app. Therefore, we will employ OpenCV for the preprocessing of the text. We will use it to identify and isolate characters, then we will read those characters through Tesseract.
+Tesseract is an optical character recognition (OCR) engine that works very well under closed conditions. To recognize text, there must be a very clean segmentation of the foreground text from the background<sup>[1](#1)</sup>. These conditions are unlikely to be met for the photos uploaded to this app. Therefore, we will employ OpenCV for the preprocessing of the text. We will use it to identify and isolate words, then we will recognize those word through Tesseract.
 
 This python tutorial will initially be used as reference: [https://www.pyimagesearch.com/2018/09/17/opencv-ocr-and-text-recognition-with-tesseract/](https://www.pyimagesearch.com/2018/09/17/opencv-ocr-and-text-recognition-with-tesseract/)
 
@@ -53,7 +53,7 @@ _The **output layer** is the simplest, usually consisting of a single output for
 
 
 
-## Notes
+##
 
 <a name="1">1</a>:
      [https://www.pyimagesearch.com/2017/07/10/using-tesseract-ocr-python/](https://www.pyimagesearch.com/2017/07/10/using-tesseract-ocr-python/)
@@ -61,4 +61,4 @@ _The **output layer** is the simplest, usually consisting of a single output for
 <a name="2">2</a>:[https://www.reddit.com/r/explainlikeimfive/comments/2psgpp/eli5_what_is_deep_learning_and_how_does_it_work/cmzmkr4?utm_source=share&utm_medium=web2x](https://www.reddit.com/r/explainlikeimfive/comments/2psgpp/eli5_what_is_deep_learning_and_how_does_it_work/cmzmkr4?utm_source=share&utm_medium=web2x)
 
 <a name="3">3</a>:
-     [https://stackoverflow.com/a/35347548](https://stackoverflow.com/a/35347548) 
+     [https://stackoverflow.com/a/35347548](https://stackoverflow.com/a/35347548)
