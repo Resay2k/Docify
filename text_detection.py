@@ -39,12 +39,6 @@ rH = H / float(newH)
 image = cv2.resize(image, (newW, newH))
 (H, W) = image.shape[:2]
 
-# resize the image and grab the new image dimensions
-image = cv2.resize(image, (newW, newH))
-(H, W) = image.shape[:2]
-
-# In order to perform text detection using OpenCV and the EAST deep learning model,
-# we need to extract the output feature maps of two layers:
 # define the two output layer names for the EAST detector model that
 # we are interested -- the first is the output probabilities - does a region contain
 # text or not? - and the second can be used to derive the bounding box coordinates of text
