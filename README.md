@@ -27,8 +27,8 @@ When an image is read into variable using the OpenCV library, it is stored in a 
 
 
 1. Gray scale images are held in single channel arrays with pixel values ranging from 0-255. The channel holds the grayness of a pixel. 0 representing the color white and 255 representing black.
-2.  RGB images are held in 3 channel arrays with pixel values ranging from 255*255*255. The channels represent how red, green and blue a pixel is, respectively.
-3. RGBA images are held in 4 channel arrays ranging from 255*255*255*255 with the last channel representing how transparent an image is. 0 represents complete transparency and 255 complete opaqueness.
+2.  RGB images are held in 3 channel arrays with pixel values ranging from ``255*255*255``. The channels represent how red, green and blue a pixel is, respectively.
+3. RGBA images are held in 4 channel arrays ranging from ``255*255*255*255`` with the last channel representing how transparent an image is. 0 represents complete transparency and 255 complete opaqueness.
 
 
 ### 4.2 Deep Learning
