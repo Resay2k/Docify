@@ -18,14 +18,15 @@ app.post('/upload', upload.single('photo'), (req, res, next) => {
         console.log(req.file)
 
         // start python process and pass saved images filename
-        var process = childProcess.spawn('python',["./vision.py", req.file.filename]);
+        var process = childProcess.spawn('python',["./text_detection.py", req.file.filename]);
 
 
         // Takes stdout data from script which executed
         // with arguments and send this data to res object
-        process.stdout.on('data', function(data) {
-                res.send(data.toString());
-        })
+        // process.stdout.on('data', function(data) {
+        //         res.send(data.toString());
+        // })
+        next()
       } else throw 'error';
 });
 
